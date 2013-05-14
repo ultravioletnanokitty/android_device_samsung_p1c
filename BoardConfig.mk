@@ -22,7 +22,7 @@
 -include vendor/samsung/p1c/BoardConfigVendor.mk
 
 # Kernel
-TARGET_KERNEL_SOURCE := kernel/samsung/p1c
+TARGET_KERNEL_SOURCE := kernel/samsung/aries
 TARGET_KERNEL_CONFIG := cyanogenmod_p1c_defconfig
 
 # Asserts
