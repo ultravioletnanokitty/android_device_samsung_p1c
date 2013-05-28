@@ -37,8 +37,12 @@ BOARD_CUSTOM_BOOTIMG_MK := device/samsung/p1c/shbootimg.mk
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 262144000
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 262144000
 
+# BOARD_USES_HDMI := true
+# TARGET_SEC_OMX_BIG_MMAP_BUFFER_SIZE := true
+TARGET_USE_HWDECODING_TVOUT := true
+
 # Vold
-TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/platform/usb_mass_storage/lun%d/file"
+TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/platform/s3c-usbgadget/gadget/lun%d/file"
 
 # Import the p1-common BoardConfigCommon.mk
 include device/samsung/p1-common/BoardConfigCommon.mk
