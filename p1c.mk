@@ -53,6 +53,10 @@ PRODUCT_COPY_FILES := \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml
 
+# vold
+PRODUCT_COPY_FILES += \
+    device/samsung/p1c/prebuilt/etc/vold.fstab:system/etc/vold.fstab
+
 # RIL
 PRODUCT_COPY_FILES += \
     device/samsung/p1c/prebuilt/etc/ppp/ip-up:system/etc/ppp/ip-up

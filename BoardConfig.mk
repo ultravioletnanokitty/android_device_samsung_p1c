@@ -25,9 +25,6 @@
 TARGET_KERNEL_SOURCE := kernel/samsung/aries
 TARGET_KERNEL_CONFIG := cyanogenmod_p1c_defconfig
 
-# Recovery fstab
-TARGET_RECOVERY_FSTAB := device/samsung/p1c/fstab.p1c
-
 # Asserts
 TARGET_OTA_ASSERT_DEVICE := galaxytab7c,p1c,SCH-I800,SPH-P100,vzwtab
 
