@@ -28,6 +28,10 @@ TARGET_KERNEL_CONFIG := cyanogenmod_p1c_defconfig
 # Asserts
 TARGET_OTA_ASSERT_DEVICE := galaxytab7c,p1c,SCH-I800,SPH-P100,vzwtab
 
+# TWRP
+TW_INTERNAL_STORAGE_PATH        := "/sdcard"
+TW_INTERNAL_STORAGE_MOUNT_POINT := "sdcard"
+
 # boot.img
 BOARD_BOOTIMAGE_PARTITION_SIZE := 7864320
 BOARD_CUSTOM_BOOTIMG_MK := device/samsung/p1c/shbootimg.mk
