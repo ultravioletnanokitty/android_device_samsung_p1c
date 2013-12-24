@@ -36,6 +36,8 @@ TW_INTERNAL_STORAGE_MOUNT_POINT := "sdcard"
 BOARD_BOOTIMAGE_PARTITION_SIZE := 7864320
 BOARD_CUSTOM_BOOTIMG_MK := device/samsung/p1c/shbootimg.mk
 
+TARGET_RECOVERY_FSTAB := device/samsung/p1c/fstab.p1c
+
 # Dummy values
 # we don't need these img files, but default sizes are way too low
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2010529792
