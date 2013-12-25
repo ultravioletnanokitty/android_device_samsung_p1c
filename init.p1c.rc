@@ -3,9 +3,8 @@ import init.p1c.usb.rc
 
 on init
     export EXTERNAL_STORAGE /storage/sdcard0
-    mkdir /storage/sdcard0 0000 root root
-    symlink /storage/sdcard0 /sdcard
-    symlink /storage/sdcard0 /mnt/sdcard
+    mkdir /storage/sdcard0 0700 root root
+    mkdir /mnt/media_rw/sdcard0 0700 media_rw media_rw
 
 on boot
 
@@ -26,6 +25,11 @@ service gps-daemon /system/vendor/bin/gpsd
     class main
     user system
     group system inet
+
+# FUSE sdcard daemon for rich permissions (runs as media_rw)
+service fuse_sdcard0 /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/sdcard0 /storage/sdcard0
+    class late_start
+    disabled
 
 on property:ril.cdma.data_state=1
     restart pppd_cdma
