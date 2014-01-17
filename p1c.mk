@@ -30,10 +30,20 @@ PRODUCT_COPY_FILES := \
 PRODUCT_COPY_FILES += \
     device/samsung/p1c/prebuilt/etc/vold.fstab:system/etc/vold.fstab
 
-# RIL
+# CDMA stuff
 PRODUCT_COPY_FILES += \
-    device/samsung/p1c/prebuilt/etc/ppp/ip-up:system/etc/ppp/ip-up \
-    frameworks/native/data/etc/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml
+    frameworks/native/data/etc/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml \
+    device/samsung/p1c/prebuilt/etc/ppp/ip-up:system/etc/ppp/ip-up
+
+PRODUCT_PROPERTY_OVERRIDES := \
+       ro.telephony.default_network=4 \
+       ro.ril.def.agps.mode=2 \
+       ro.ril.samsung_cdma=true \
+       net.cdma.datalinkinterface=/dev/ttyCDMA0 \
+       net.cdma.ppp.interface=ppp0 \
+       net.connectivity.type=CDMA1 \
+       net.interfaces.defaultroute=cdma \
+       mobiledata.interfaces=wlan0,ppp0
 
 # Inherit p1-common and p1c-vendor device configuration.
 $(call inherit-product, device/samsung/p1-common/device_base.mk)
