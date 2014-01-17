@@ -12,17 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-#
-# This file is the build configuration for a full Android
-# build for crespo hardware. This cleanly combines a set of
-# device-specific aspects (drivers) with a device-agnostic
-# product configuration (apps).
-#
-
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
-# This is where we'd set a backup provider if we had one
-#$(call inherit-product, device/sample/products/backup_overlay.mk)
 $(call inherit-product, device/samsung/p1c/p1c.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full.mk)
 
@@ -37,5 +28,5 @@ PRODUCT_NAME := full_p1c
 PRODUCT_DEVICE := p1c
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
-PRODUCT_MODEL := SCH-I800
+PRODUCT_MODEL := Galaxy Tab 7
 
